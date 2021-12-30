@@ -15,5 +15,5 @@
 name 'tomcat'
 depends 'apache2'
 depends 'c2d-config'
-depends 'openjdk11'
+depends 'openjdk8'
 supports 'debian'
