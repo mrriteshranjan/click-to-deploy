@@ -12,9 +12,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-default['haproxy']['version'] = '2.5'
-default['haproxy']['apt_version'] = "#{default['haproxy']['version']}.\*"
-default['haproxy']['repo']['uri'] = 'https://haproxy.debian.net'
-default['haproxy']['repo']['components'] = ['main']
-default['haproxy']['repo']['distribution'] = 'buster-backports-2.5'
-default['haproxy']['repo']['keyserver'] = 'https://haproxy.debian.net/bernat.debian.org.gpg'
+default['haproxy']['packages'] = ['haproxy']
