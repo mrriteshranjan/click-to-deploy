@@ -17,7 +17,6 @@ FROM {{ .From }}
 {{- $hazelcast := index .Packages "hazelcast" }}
 {{- $cache_api := index .Packages "cache_api" }}
 {{- $jmx_prometheus_agent := index .Packages "jmx_prometheus_agent" }}
-{{- $log4j2 := index .Packages "log4j2" }}
 
 ENV DEBUG_DOCKER_ENTRYPOINT false
 
@@ -29,7 +28,7 @@ ARG HZ_VERSION={{ $hazelcast.Version }}
 ARG HZ_VERSION_SHA={{ $hazelcast.Sha256 }}
 ARG CACHE_API_VERSION={{ $cache_api.Version }}
 ARG JMX_PROMETHEUS_AGENT_VERSION={{ $jmx_prometheus_agent.Version }}
-ARG LOG4J2_VERSION={{ $log4j2.Version }}
+ARG LOG4J2_VERSION=2.13.3
 
 # Build constants
 ARG HZ_HOME="/opt/hazelcast"
